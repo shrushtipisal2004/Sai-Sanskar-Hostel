@@ -1,0 +1,437 @@
+/* ===============================
+   ✅ General Styles
+=============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+/* ====================
+   Header Section - Two Lines
+======================= */
+header {
+    background-color: #2C3E50;
+    color: white;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* ✅ Line 1: Logo and Name */
+.top-header {
+    padding: 10px 20px;
+    border-bottom: 1px solid #34495e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.hostel-name {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* ✅ Menu Bar */
+.bottom-header {
+    background-color: #34495e;
+    padding: 10px 0;
+	color: white;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+	color: white;
+}
+
+/* ✅ Menu List */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;   
+    font-size: 18px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #3498db;
+}
+
+/* ✅ Close Button (Inside Menu) */
+.close-menu {
+    text-align: right;
+    font-size: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    display: none;
+}
+
+/* ✅ Responsive Menu */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        text-align: right;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #2C3E50;
+        position: absolute;
+        top: 120px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+    }
+
+    .hostel-name {
+        font-size: 20px;
+    }
+
+    .close-menu {
+        display: block;
+    }
+}
+
+ 
+
+
+/* ===============================
+   ✅ Hero Section (With Image Background)
+=============================== */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1; /* Ensures hero stays above other content */
+}
+
+/* ✅ Background Image */
+.hero-background {
+    background-image: url('../images/hostelbg.jpeg'); /* Ensure path is correct */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2; /* Keeps background visible behind everything */
+}
+
+/* ✅ Overlay */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2; /* Keeps text above background */
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 22px;
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    /* ✅ Ensure Menu Doesn't Cover Hero Section */
+    nav ul.active {
+        display: flex;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        width: 100%;
+        background-color: #2C3E50;
+        z-index: 1000; /* Keeps menu on top */
+    }
+
+    .hero {
+        z-index: 1; /* Keeps hero section above menu */
+    }
+
+    .hero-background {
+        z-index: -2; /* Ensures background image is visible */
+    }
+
+    .overlay {
+        position: relative;
+        z-index: 2; /* Keeps overlay text above everything */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+
+
+/* ===============================
+   ✅ About Section
+=============================== */
+.about {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.about h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* ========================
+   Why Choose Us Section
+========================= */
+.why-choose-us {
+    background: #f1f1f1;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    font-size: 35px;
+    color: black;
+    margin-bottom: 30px;
+}
+
+/* ✅ 6 Columns Divided into 2 Rows */
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ✅ Feature Box Design */
+.feature-item {
+    background: #b3b7bd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ✅ Hover Effect */
+.feature-item:hover {
+    background: #dfe6e9;
+    transform: scale(1.05);
+}
+
+/* ✅ Title in Box */
+.feature-item h3 {
+    font-size: 22px;
+    color: #2C3E50;
+    margin-bottom: 10px;
+}
+
+/* ✅ Paragraph Text */
+.feature-item p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 992px) {
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ===============================
+   ✅ Info Section
+=============================== */
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-text {
+    width: 50%;
+}
+
+.info-text h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.info-text p {
+	font-size: 25px;
+}
+
+.info-image img {
+    width: 100%;
+    border-radius: 50px;
+}
+
+/* ===============================
+   ✅ Footer Section
+=============================== */
+footer {
+    background-color: #2C3E50;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #bdc3c7;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+}
+
+/* ===============================
+   ✅ Responsive Design
+=============================== */
+@media (max-width: 900px) {
+    .info-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-text, .info-image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+}

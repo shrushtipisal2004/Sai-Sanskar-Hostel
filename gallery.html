@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+	<link rel="stylesheet" href="css/gallerystyle.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <!-- Line 1: Logo and Name -->
+    <div class="top-header">
+        <div class="logo-container">
+            <span class="hostel-name">Sai Sanskar Hostel</span>
+        </div>
+    </div>
+
+    <!-- Line 2: Menubar -->
+    <div class="bottom-header">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <nav>
+            <ul id="menu-list">
+                <li class="close-menu" onclick="toggleMenu()">✖</li> <!-- Close Button -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html" >About Us</a></li>
+                <li><a href="rulesandregulations.html">Rules & Regulations</a></li>
+                <li><a href="services.html" >Services</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+				<li><a href="https://saisanskarhsteljaitapur.blogspot.com/">Blog</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <h1>Sai Sanskar Hostel Gallery</h1>
+    <div class="gallery">
+        <img src="images/img1.jpeg" onclick="openLightbox(this.src)">
+        <img src="images/img2.jpg" onclick="openLightbox(this.src)">
+        <img src="images/img3.jpeg" onclick="openLightbox(this.src)">
+        <img src="images/img4.jpeg" onclick="openLightbox(this.src)">
+        <img src="images/img5.jpeg" onclick="openLightbox(this.src)">
+        <img src="images/img6.jpeg" onclick="openLightbox(this.src)">
+        <img src="images/img7.jpeg" onclick="openLightbox(this.src)">
+        <img src="images/img8.jpeg" onclick="openLightbox(this.src)">
+        <img src="images/img9.jpeg" onclick="openLightbox(this.src)">
+        <img src="images/img10.jpeg" onclick="openLightbox(this.src)">
+        <img src="images/img11.jpeg" onclick="openLightbox(this.src)">
+        <img src="images/img12.jpeg" onclick="openLightbox(this.src)">
+        <img src="images/img13.jpeg" onclick="openLightbox(this.src)">
+    </div>
+    <div class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img">
+    </div>
+     <script src="js/galleryscript.js"></script> 
+	 
+	 
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Mr. Vijay Nikam 8999908139<br>Mrs. Rupali Nikam 8805553577<br><a class="footer-link" href="mailto:sanskarhostelsai@gmail.com">sanskarhostelsai@gmail.com</a></p>
+            </div>
+             <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                <li><a href="aboutus.html" >About Us</a></li>
+                
+                <li><a href="services.html" >Services</a></li>
+                <li><a href="gallery.html" >Gallery</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="https://saisanskarhsteljaitapur.blogspot.com/">Blog</a></li>
+                <li><a href="developer.html">Developer</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Address</h3>
+                <p>Jaitapur, Satara-Rahimatpur road</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Sai Sanskar Hostel. All Rights Reserved.</p>
+        </div>
+    </footer>
+	 
+</body>
+</html>

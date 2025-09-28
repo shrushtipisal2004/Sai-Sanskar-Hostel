@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Updates</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+        .update-item {
+            background: #fff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .update-item h3 { color: #333; }
+        .update-item p { color: #666; }
+        .update-item small { display: block; color: #999; margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+    <h2>Latest Updates</h2>
+    <div id="updates-container">Loading updates...</div>
+
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Firebase SDK
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
+
+// Firebase Configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyC2honZ977KzU8mG2rF1KifGoec9zwzpA4",
+    authDomain: "saisanskarhostel-cbccc.firebaseapp.com",
+    databaseURL: "https://saisanskarhostel-cbccc-default-rtdb.firebaseio.com",
+    projectId: "saisanskarhostel-cbccc",
+    storageBucket: "saisanskarhostel-cbccc.appspot.com",
+    messagingSenderId: "1445149479",
+    appId: "1:1445149479:web:5eafa1bcdc5d77dcf50702",
+    measurementId: "G-06QFV51LL6"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+
+// Function to Fetch Updates
+function fetchUpdates() {
+    const updatesRef = ref(database, "updates/aboutus"); // Accessing "aboutus"
+    const updatesContainer = document.getElementById("updates-container");
+
+    onValue(updatesRef, (snapshot) => {
+        updatesContainer.innerHTML = ""; // Clear previous content
+
+        if (snapshot.exists()) {
+            const updates = snapshot.val();
+            let contentHTML = "";
+
+            // Loop through each update
+            Object.keys(updates).forEach((key) => {
+                const update = updates[key];
+                
+                // Check if update has valid content before rendering
+                if (update && update.content) {
+                    contentHTML += `
+                        <div class="update-item">
+                            <p>${update.content}</p>
+                            ${update.imageUrl ? `<img src="${update.imageUrl}" width="100%" style="max-width:300px; border-radius:5px; margin-top:10px;">` : ""}
+                            <small>${update.updatedAt ? new Date(update.updatedAt).toLocaleString() : "No date available"}</small>
+                        </div>
+                    `;
+                }
+            });
+
+            // Display content if available, otherwise show a message
+            updatesContainer.innerHTML = contentHTML || "<p>No updates available.</p>";
+        } else {
+            updatesContainer.innerHTML = "<p>No updates available.</p>";
+        }
+    }, (error) => {
+        console.error("Error fetching data:", error);
+        updatesContainer.innerHTML = `<p style="color:red;">Error loading updates.</p>`;
+    });
+}
+
+// Fetch updates on page load
+fetchUpdates();
+
+    </script>
+
+</body>
+</html>

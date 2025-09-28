@@ -1,0 +1,52 @@
+body, h1, h2 {
+ margin:0;
+ padding:0;
+}
+body {
+ background: #F0F4F8; /* Light Grayish Blue for a clean, modern look */
+ font-family: Arial, sans-serif;
+ 
+}
+h1 {
+ padding:10px;
+ background: #002147;  /* Deep Navy Blue for a bold header */
+ color: white;
+ 
+}
+#userList {
+ margin:0;
+ padding:0;
+ width:300px;
+ float:left;
+ margin:10px;
+ border:1px solid #455A64;  /* Muted Grayish Blue */
+}
+
+#userList h2 {
+ padding:10px;
+ margin:0;
+ color: #5A88C5; /* Soft Blue */
+}
+
+#userList li {
+ padding:5px 10px;
+ border-top:1px solid #455A64;
+ cursor: pointer;
+ color: #2C3E50; /* Dark Slate Blue for contrast */
+ font-style: italic;
+}
+
+#userList li:hover {
+ background:  #B0C4DE; /* Light Steel Blue for a soft hover effect */
+ color: #1C2833;
+}
+
+#userDetail {
+ float:left;
+ width:300px;
+ margin:10px;
+ margin-left:0;
+ padding:10px;
+ border:1px solid #455A64;
+ color:black;
+}

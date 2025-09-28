@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Rules and Regulations</title>
+    <link rel="stylesheet" href="css/rulesandregulationsstyle.css">
+</head>
+<body>
+ <header>
+    <!-- Line 1: Logo and Name -->
+    <div class="top-header">
+        <div class="logo-container">
+            <span class="hostel-name">Sai Sanskar Hostel</span>
+        </div>
+    </div>
+
+    <!-- Line 2: Menubar -->
+    <div class="bottom-header">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <nav>
+            <ul id="menu-list">
+                <li class="close-menu" onclick="toggleMenu()">✖</li> <!-- Close Button -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="rulesandregulations.html" class="active" >Rules & Regulations</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html" >Gallery</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+				<li><a href="https://saisanskarhsteljaitapur.blogspot.com/">Blog</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <main>
+    <div class="container">
+        <h1 class="title">Hostel Rules & Regulations</h1>  <!-- Added Title -->
+
+        <section class="rule-box">
+            <h2 onclick="toggleRules('general-rules')">General Rules</h2>
+            <ul id="general-rules" class="rules-list">
+                <li>All students must be formally admitted to the hostel before entering.</li>
+                <li>Students must adhere to all hostel rules and maintain discipline.</li>
+                <li>Each student is responsible for keeping their room clean and organized.</li>
+                <li>Use of electric appliances like stoves and irons is strictly prohibited.</li>
+                <li>Smoking, alcohol, and any form of substance abuse are strictly prohibited.</li>
+                <li>Hostel residents must return to the hostel by the designated curfew time.</li>
+                <li>Ragging and bullying are strictly prohibited and will result in strict disciplinary action.</li>
+                <li>Visitors are not allowed inside student rooms without prior permission.</li>
+            </ul>
+        </section>
+        
+        <section class="rule-box">
+            <h2 onclick="toggleRules('financial-rules')">Financial & Attendance Rules</h2>
+            <ul id="financial-rules" class="rules-list">
+                <li>All fees must be paid on time. Non-payment may result in expulsion.</li>
+                <li>Students must attend hostel meetings and comply with hostel regulations.</li>
+                <li>Damages to hostel property will be charged to the responsible student.</li>
+                <li>Leaving the hostel without prior permission from authorities is not allowed.</li>
+            </ul>
+        </section>
+        
+        <section class="rule-box">
+            <h2 onclick="toggleRules('safety-rules')">Safety & Security</h2>
+            <ul id="safety-rules" class="rules-list">
+                <li>Students must respect hostel staff and fellow residents at all times.</li>
+                <li>Loss of personal belongings is the student’s responsibility.</li>
+                <li>Hostel authorities hold the final decision in all matters related to hostel regulations.</li>
+            </ul>
+        </section>
+    </div>
+</main>
+
+
+    <script src="js/rulesandregulationsscript.js"></script>
+ <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Mr. Vijay Nikam 8999908139<br>Mrs. Rupali Nikam 8805553577<br><a class="footer-link" href="mailto:sanskarhostelsai@gmail.com">sanskarhostelsai@gmail.com</a></p>
+            </div>
+            <div class="footer-section">
+              <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                <li><a href="aboutus.html" >About Us</a></li>
+                
+                <li><a href="services.html" >Services</a></li>
+                <li><a href="gallery.html" >Gallery</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="https://saisanskarhsteljaitapur.blogspot.com/">Blog</a></li>
+                <li><a href="developer.html">Developer</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Address</h3>
+                <p>Jaitapur, Satara-Rahimatpur road</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Sai Sanskar Hostel. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Sai Sanskar Hostel</title>
+    <link rel="stylesheet" href="css/servicesstyle.css" />
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <!-- Line 1: Logo and Name -->
+    <div class="top-header">
+        <div class="logo-container">
+            <span class="hostel-name">Sai Sanskar Hostel</span>
+        </div>
+    </div>
+
+    <!-- Line 2: Menubar -->
+    <div class="bottom-header">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <nav>
+            <ul id="menu-list">
+                <li class="close-menu" onclick="toggleMenu()">✖</li> <!-- Close Button -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html" >About Us</a></li>
+                <li><a href="rulesandregulations.html">Rules & Regulations</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+				<li><a href="https://saisanskarhsteljaitapur.blogspot.com/">Blog</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- Services Section -->
+<section class="services">
+    <div class="container">
+        <h2>Our Services</h2>
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button onclick="filterServices('all')">All</button>
+            <button onclick="filterServices('facility')">Facility</button>
+            <button onclick="filterServices('security')">Security</button>
+            <button onclick="filterServices('medical')">Medical</button>
+        </div>
+
+        <div class="service-list" id="serviceList">
+
+            <!-- Service Item 1 -->
+            <div class="service-item facility">
+                <img src="images/img10.jpeg" alt="Dining Facility">
+                <h3>Dining Facility</h3>
+                <p>We offer a hygienic and nutritious dining experience with a variety of meal options to cater to different tastes and dietary needs.</p>
+            </div>
+
+            <!-- Service Item 2 -->
+            <div class="service-item facility">
+                <img src="images/londary.jpg" alt="Laundry Service">
+                <h3>Laundry Service</h3>
+                <p>Our on-site laundry service ensures that students have clean and fresh clothes at all times.</p>
+            </div>
+
+            <!-- Service Item 3 -->
+            <div class="service-item security">
+                <img src="images/camera.jpg" alt="24/7 Security">
+                <h3>24/7 Security</h3>
+                <p>Our hostel is equipped with CCTV cameras and security personnel to ensure a safe and secure environment for all residents.</p>
+            </div>
+
+            <!-- Service Item 4 -->
+            <div class="service-item facility">
+                <img src="images/wifi.jpg" alt="High-Speed Wi-Fi">
+                <h3>High-Speed Wi-Fi</h3>
+                <p>Stay connected with our high-speed Wi-Fi, available throughout the hostel premises.</p>
+            </div>
+
+            <!-- Service Item 5 -->
+            <div class="service-item medical">
+                <img src="images/medical.jpg" alt="Medical Assistance">
+                <h3>Medical Assistance</h3>
+                <p>We have a dedicated medical room and tie-ups with nearby hospitals for quick medical assistance.</p>
+            </div>
+
+            <!-- New Services -->
+            <div class="service-item facility">
+                <img src="images/gym.jpg" alt="Gym">
+                <h3>Gym</h3>
+                <p>A well-equipped gym is available for students to maintain their fitness and stay healthy.</p>
+            </div>
+
+            <div class="service-item facility">
+                <img src="images/study.jpg" alt="Study Room">
+                <h3>Study Room</h3>
+                <p>Dedicated study rooms with a peaceful environment for focused learning and group discussions.</p>
+            </div>
+
+            <div class="service-item facility">
+                <img src="images/transport.jpg" alt="Transport Service">
+                <h3>Transport Service</h3>
+                <p>Transport facilities are available to help students commute to nearby colleges and city areas.</p>
+            </div>
+
+            <div class="service-item security">
+                <img src="images/cctv.jpg" alt="CCTV Monitoring">
+                <h3>CCTV Monitoring</h3>
+                <p>All common areas are monitored 24/7 through CCTV cameras to ensure the safety of residents.</p>
+            </div>
+
+            <div class="service-item medical">
+                <img src="images/firstaid.jpg" alt="First Aid Kit">
+                <h3>First Aid Kit</h3>
+                <p>First aid kits are available on every floor to handle minor injuries and emergencies.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Mr. Vijay Nikam 8999908139<br>Mrs. Rupali Nikam 8805553577<br><a class="footer-link" href="mailto:sanskarhostelsai@gmail.com">sanskarhostelsai@gmail.com</a></p>
+            </div>
+              <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                <li><a href="aboutus.html" >About Us</a></li>
+                
+                <li><a href="services.html" >Services</a></li>
+                <li><a href="gallery.html" >Gallery</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="https://saisanskarhsteljaitapur.blogspot.com/">Blog</a></li>
+                <li><a href="developer.html">Developer</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Address</h3>
+                <p>Jaitapur, Satara-Rahimatpur road</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Sai Sanskar Hostel. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+<!-- JavaScript -->
+<script src="js/servicesscript.js"></script>
+
+</body>
+</html>

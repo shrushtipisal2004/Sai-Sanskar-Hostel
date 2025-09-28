@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback - Sai Sanskar Hostel</title>
+    <link rel="stylesheet" href="css/feedbackstyle.css" />
+</head>
+<body>
+<header>
+    <!-- Line 1: Logo and Name -->
+    <div class="top-header">
+        <div class="logo-container">
+            <span class="hostel-name">Sai Sanskar Hostel</span>
+        </div>
+    </div>
+
+    <!-- Line 2: Menubar -->
+    <div class="bottom-header">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <nav>
+            <ul id="menu-list">
+                <li class="close-menu" onclick="toggleMenu()">✖</li> <!-- Close Button -->
+				<li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html" >About Us</a></li>
+                <li><a href="rulesandregulations.html">Rules & Regulations</a></li>
+                <li><a href="services.html" >Services</a></li>
+                <li><a href="gallery.html" >Gallery</a></li>
+                <li><a href="feedback.html" class="active">Feedback</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+				<li><a href="https://saisanskarhsteljaitapur.blogspot.com/">Blog</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="feedback-container">
+    <!-- ✅ Left Side: Content Section -->
+    <div class="content-section">
+        <h2>Your Feedback Matters!</h2>
+        <p>At Sai Sanskar Hostel, we value your feedback as it helps us improve our services and provide a better living experience for all students.</p>
+        <p>We strive to create a secure and welcoming environment where you can focus on your academic journey without stress.</p>
+        <p>Your insights and suggestions enable us to grow and create a more comfortable and supportive community.</p>
+        <div class="benefits">
+            <h3>Why Your Feedback is Important:</h3>
+            <ul>
+                <li>Helps us enhance the hostel facilities.</li>
+                <li>Improves the overall student experience.</li>
+                <li>Creates a more supportive and secure environment.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ✅ Right Side: Feedback Form -->
+    <div class="form-section">
+        <h2>Share Your Experience</h2>
+        <form id="feedback-form">
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Full Name" required />
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Email Address" required />
+            </div>
+            <div class="form-group">
+                <textarea id="message" name="message" rows="5" placeholder="Your Feedback" required></textarea>
+            </div>
+            <div class="rating-group">
+                <label>Rate Your Experience:</label>
+                <div class="stars">
+                    <span class="star" data-value="1">★</span>
+                    <span class="star" data-value="2">★</span>
+                    <span class="star" data-value="3">★</span>
+                    <span class="star" data-value="4">★</span>
+                    <span class="star" data-value="5">★</span>
+                </div>
+            </div>
+            <button type="submit" class="btn-submit">Submit Feedback</button>
+        </form>
+        <div id="thank-you" class="hidden">
+            <h2>Thank You for Your Feedback!</h2>
+            <p>We appreciate your time and effort to help us improve.</p>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/feedbackscript.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  
+<!-- ✅ Footer -->
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Mr. Vijay Nikam: 8999908139<br>
+                Mrs. Rupali Nikam: 8805553577<br>
+                <a href="mailto:sanskarhostelsai@gmail.com">sanskarhostelsai@gmail.com</a>
+            </p>
+        </div>
+         <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                <li><a href="aboutus.html" >About Us</a></li>
+                
+                <li><a href="services.html" >Services</a></li>
+                <li><a href="gallery.html" >Gallery</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="https://saisanskarhsteljaitapur.blogspot.com/">Blog</a></li>
+                <li><a href="developer.html">Developer</a></li>
+                </ul>
+            </div>
+        <div class="footer-section">
+            <h3>Address</h3>
+            <p>Jaitapur, Satara-Rahimatpur Road</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 Sai Sanskar Hostel. All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

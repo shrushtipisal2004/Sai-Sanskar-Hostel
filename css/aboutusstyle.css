@@ -1,0 +1,367 @@
+/* ===============================
+   ✅ General Styles
+=============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* ====================
+   Header Section - Two Lines
+======================= */
+header {
+    background-color: #2C3E50;
+    color: white;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* ✅ Line 1: Logo and Name */
+.top-header {
+    padding: 10px 20px;
+    border-bottom: 1px solid #34495e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.hostel-name {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* ✅ Menu Bar */
+.bottom-header {
+    background-color: #34495e;
+    padding: 10px 0;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* ✅ Menu List */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #3498db;
+}
+
+/* ✅ Close Button (Inside Menu) */
+.close-menu {
+    text-align: right;
+    font-size: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    display: none;
+}
+
+/* ✅ Responsive Menu */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        text-align: right;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #2C3E50;
+        position: absolute;
+        top: 120px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+    }
+
+    .hostel-name {
+        font-size: 20px;
+    }
+
+    .close-menu {
+        display: block;
+    }
+}
+
+/* ===============================
+   ✅ About Section
+=============================== */
+.about {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #ffffff;
+	 
+}
+
+.about h2 {
+    font-size: 36px;
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* ===============================
+   ✅ Info Section (Vision & Mission)
+=============================== */
+.info-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.info-text {
+    width: 55%;
+}
+
+.info-text h2 {
+    font-size: 32px;
+    color: #2C3E50;
+    margin-bottom: 15px;
+}
+
+.info-text p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.info-text ul {
+    list-style: none;
+}
+
+.info-text ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.info-image img {
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.info-image img:hover {
+    transform: scale(1.05);
+}
+
+/* ✅ Responsive Info Section */
+@media (max-width: 900px) {
+    .info-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-text,
+    .info-image {
+        width: 100%;
+    }
+}
+/* Center the 'Why Choose Sai Sanskar Hostel' section */
+.info-section.centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.info-section.centered .info-text {
+	text-align:center;
+    width: 100%; /* Full width to center text content */
+
+}
+.info-section.centered ul {
+	margin-top: 10px;
+    display: inline-block; /* Ensures the list is treated as a block and centered */
+    text-align: left; /* Keeps the text properly aligned while the list itself is centered */
+    padding: 0;
+}
+
+.info-section.centered ul li {
+    list-style: none; /* Removes default bullets */
+    padding-left: 0; /* Ensures no extra spacing */
+}
+/* ===============================
+   ✅ Testimonials Section
+=============================== */
+.testimonials {
+    padding: 50px 20px;
+    background-color: #ecf0f1;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 30px;
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+.testimonial {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.testimonial p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+//*update section css*//
+#updates-section {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.update-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.update-item h3 {
+    color: #333;
+    margin: 5px 0;
+}
+
+.update-item p {
+    color: #666;
+}
+
+
+
+
+/* ===============================
+   ✅ Footer Section
+=============================== */
+footer {
+    background-color: #2C3E50;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #bdc3c7;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #3498db;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+}
+
+/* ✅ Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ===============================
+   ✅ Animations
+=============================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about h2, .about p {
+    animation: fadeInUp 1s ease;
+}

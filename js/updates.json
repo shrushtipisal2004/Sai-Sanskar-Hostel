@@ -1,0 +1,19 @@
+{
+  "updates": {
+    "aboutus": {
+      "content": "Updated About Us content",
+      "imageUrl": "https://storage.example.com/aboutus.jpg",
+      "updatedAt": "2025-03-28T12:00:00Z"
+    },
+    "facilities": {
+      "content": "Updated Facilities content",
+      "imageUrl": "",
+      "updatedAt": "2025-03-28T12:05:00Z"
+    },
+    "gallery": {
+      "content": "",
+      "imageUrl": "https://storage.example.com/gallery1.jpg",
+      "updatedAt": "2025-03-28T12:10:00Z"
+    }
+  }
+}

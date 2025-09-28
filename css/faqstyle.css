@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
+
+
+/* ====================
+   Header Section - Two Lines
+======================= */
+header {
+    background-color: #2C3E50;
+    color: white;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* ✅ Line 1: Logo and Name */
+.top-header {
+    padding: 10px 20px;
+    border-bottom: 1px solid #34495e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.hostel-name {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* ✅ Menu Bar */
+.bottom-header {
+    background-color: #34495e;
+    padding: 10px 0;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* ✅ Menu List */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #3498db;
+}
+
+/* ✅ Close Button (Inside Menu) */
+.close-menu {
+    text-align: right;
+    font-size: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    display: none;
+}
+
+/* ✅ Responsive Menu */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        text-align: right;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #2C3E50;
+        position: absolute;
+        top: 120px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+    }
+
+    .hostel-name {
+        font-size: 20px;
+    }
+
+    .close-menu {
+        display: block;
+    }
+}
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Muli", sans-serif;
+    background-color: #f0f0f0;
+}
+
+
+
+h1 {
+    margin: 50px 0 30px;
+    text-align: center;
+}
+
+.faq-container {
+    max-width: 600px;
+    margin: 0 auto;
+	
+
+}
+.faq-container.hidden {
+    display: none;
+}
+
+.faq {
+    background-color: transparent;
+    border: 1px solid #9fa4a8;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq.active {
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.faq-text {
+    display: none;
+    margin: 30px 0 0;
+}
+
+.faq.active .faq-text {
+    display: block;
+}
+
+.faq-toggle {
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    padding: 0;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 30px;
+    width: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.faq-toggle:focus {
+    outline: none;
+}
+
+.faq-toggle .fa-times {
+    display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+    color: #fff;
+    display: block;
+}
+
+.faq-toggle .fa-chevron-down {
+    display: block;
+    color: #007bff;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+    display: none;
+}
+
+.faq.active .faq-toggle {
+    background-color: #9fa4a8;
+}
+
+/* ===============================
+   ✅ Footer Section
+=============================== */
+footer {
+    background-color: #2C3E50;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #bdc3c7;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+}
+
+/* ===============================
+   ✅ Responsive Design
+=============================== */
+@media (max-width: 900px) {
+    .info-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-text, .info-image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+}

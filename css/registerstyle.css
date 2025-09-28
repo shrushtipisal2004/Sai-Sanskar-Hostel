@@ -1,0 +1,292 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #375470, #34597d);
+    margin: 0;
+    padding: 0;
+	width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
+    min-height: 100vh;
+	overflow-x: hidden;
+}
+
+/* ====================
+   Header Section - Two Lines
+======================= */
+header {
+    background-color: #2C3E50;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+/* ✅ Line 1: Logo and Name */
+.top-header {
+    padding: 10px 20px;
+    border-bottom: 1px solid #34495e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.hostel-name {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* ✅ Menu Bar */
+.bottom-header {
+    background-color: #34495e;
+    padding: 10px 0;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* ✅ Menu List */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #3498db;
+}
+
+/* ✅ Close Button (Inside Menu) */
+.close-menu {
+    text-align: right;
+    font-size: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    display: none;
+}
+
+/* ✅ Responsive Menu */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        text-align: right;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #2C3E50;
+        position: absolute;
+        top: 120px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+    }
+
+    .hostel-name {
+        font-size: 20px;
+    }
+
+    .close-menu {
+        display: block;
+    }
+}
+
+/* ====================
+   Form Container (Body)
+======================= */
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 50%; /* Adjust width to be larger */
+    max-width: 800px;
+    margin-top: 200px; /* Increased margin to give more space below header */
+    margin-bottom: 80px; /* Space for footer */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    color: #34495e;
+    font-size: 16px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #1f618d;
+}
+
+/* Responsive design for smaller devices */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 30px;
+    }
+    input, select, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+}
+
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content p {
+    font-size: 16px;
+    color: #333;
+}
+
+.close-modal {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #ff0000;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
+/* ===============================
+   ✅ Footer Section
+=============================== */
+footer {
+    background-color: #2C3E50;
+    color: white;
+    padding: 40px 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #bdc3c7;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+}
